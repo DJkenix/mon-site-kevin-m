@@ -1,20 +1,48 @@
-name: Test Runner
-on:
-  push:
-    branches:
-      - main
-jobs:
-  test-runner:
-    runs-on:
-      - self-hosted
-      - linux
-      - x64
-    steps:
-      - name: Verification
-        run: echo "Test de fonctionnement du Runner !"
-      - name: tests de commandes
-        run: |
-          echo "Runner OK"
-          hostname
-          whoami
-          uname -a
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kevin MANOUKIAN</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 50px 70px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    h1 span { color: #7c6fff; }
+    p { color: #aaa; margin-top: 10px; font-size: 1.1rem; }
+    .badge {
+      display: inline-block;
+      background: #7c6fff;
+      color: white;
+      padding: 8px 24px;
+      border-radius: 999px;
+      margin-top: 24px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Kevin <span>MANOUKIAN</span></h1>
+    <p>Étudiant en développement informatique</p>
+    <p>Déployé avec GitHub Actions CI/CD</p>
+    <div class="badge">✅ Site en ligne</div>
+  </div>
+</body>
+</html>
